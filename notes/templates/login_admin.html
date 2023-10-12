@@ -39,12 +39,12 @@
     <div class="col-sm-6 btr">
         <h2 class="text-center">ADMIN LOGIN</h2>
         <HR>
-        <p>Enter Your UserName and Password for access admin panel</p>
+        <p>Enter Your User Name and Password for access admin panel</p>
         
         <form method="POST">
             {% csrf_token %}
-        <label>UserName</label>
-             <input type = "text" class="form-control" placeholder="Enter userName" name="uname">
+        <label>User Name</label>
+             <input type = "text" class="form-control" placeholder="Enter User Name" name="uname">
         <label>Password</label>   
               <input type="password" class="form-control" placeholder="Enter Password" name="pwd">
               <input type="submit" class="btn btn-danger mt-2" value="LOGIN">
