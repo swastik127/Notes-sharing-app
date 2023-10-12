@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    {% load static %}
+    <title>Notes Sharing Site</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        .navbar-nav {
+             flex-direction: row;
+             align-items: center;
+             justify-content: space-evenly;
+             margin: 0;
+             padding: 0;
+         }
+ 
+         .nav-item{
+           padding: 0px 4px;
+           width: max-content;
+         }
+         .nv{
+           margin-left: 40px;
+         }
+ 
+         .btn-link{
+             padding: 10px 24px;
+         }
+         .fluids{
+             position: fixed;
+             top: 0;
+             bottom: 0;
+             right: 0;
+             left: 0;
+             box-shadow:0px 0px 8px 0px rgba(98, 127, 172, 0.20);
+             /* z-index: 1; */
+         }
+         .navbar-brand{
+             color: #983737;
+         }
+     </style>
+</head>
+<body>
+    <div class="fluids">
+        <div class="row" style="background-color: lightgrey; padding: 10px;">
+            <div class="col-2">
+                <a class="navbar-brand" href="#">Notes Sharing App</a>
+            </div>
+            <div class="col-7 text-center">
+                <ul class="navbar-nav nv">
+                    <li class="btn-link nvi">
+                        <a class="btn-link" href="{% url 'index' %}">HOME</a>
+                    </li>
+                    <li class="btn-link">
+                        <a class="btn-link" href="{% url 'about' %}">ABOUT</a>
+                    </li>
+                    <li class="btn-link">
+                        <a class="btn-link" href="{% url 'contact' %}">CONTACT</a>
+                    </li>
+                  
+                </ul>
+            </div>
+            <div class="col-3 text-right">
+                <a class="btn btn-primary btn-login" href="{% url 'login' %}">Login</a>
+                <a class="btn btn-success btn-login" href="{% url 'login_admin' %}">Admin Login</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+{% block body %}
+{% endblock %}
